@@ -1,5 +1,6 @@
 package com.example.tp_daniklussier
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -19,5 +20,10 @@ class Inscription : AppCompatActivity() {
         setContentView(binding.root)
 
         title = "Inscription"
+
+        binding.CreateAccount.setOnClickListener {
+            intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
