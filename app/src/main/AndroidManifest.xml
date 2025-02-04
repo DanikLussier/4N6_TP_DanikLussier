@@ -13,6 +13,18 @@
         android:theme="@style/Theme.TP_DanikLussier"
         tools:targetApi="31">
         <activity
+            android:name=".Consultation"
+            android:exported="false" />
+        <activity
+            android:name=".Creation"
+            android:exported="false" />
+        <activity
+            android:name=".Connexion"
+            android:exported="false" />
+        <activity
+            android:name=".Inscription"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

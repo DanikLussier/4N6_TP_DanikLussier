@@ -5,19 +5,19 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.tp_daniklussier.databinding.ActivityConsultationBinding
+import com.example.tp_daniklussier.databinding.ActivityConnexionBinding
 import com.example.tp_daniklussier.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class Connexion : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityConnexionBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityConnexionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        title = "Accueil"
+        title = "Connexion"
     }
 }

@@ -6,18 +6,18 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.tp_daniklussier.databinding.ActivityConsultationBinding
-import com.example.tp_daniklussier.databinding.ActivityMainBinding
+import com.example.tp_daniklussier.databinding.ActivityInscriptionBinding
 
-class MainActivity : AppCompatActivity() {
+class Inscription : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityInscriptionBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityInscriptionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        title = "Accueil"
+        title = "Inscription"
     }
 }

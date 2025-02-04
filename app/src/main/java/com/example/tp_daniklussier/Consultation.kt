@@ -8,16 +8,16 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.tp_daniklussier.databinding.ActivityConsultationBinding
 import com.example.tp_daniklussier.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class Consultation : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityConsultationBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityConsultationBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        title = "Accueil"
+        title = "Consultation"
     }
 }
