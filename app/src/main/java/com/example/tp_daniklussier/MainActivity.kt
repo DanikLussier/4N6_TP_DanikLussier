@@ -1,5 +1,6 @@
 package com.example.tp_daniklussier
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -19,5 +20,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         title = "Accueil"
+
+        binding.creation.setOnClickListener {
+            val intent = Intent(this, Creation::class.java)
+            startActivity(intent)
+        }
     }
 }
