@@ -13,19 +13,19 @@
         android:theme="@style/Theme.TP_DanikLussier"
         tools:targetApi="31">
         <activity
-            android:name=".Consultation"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".Creation"
             android:exported="false" />
         <activity
-            android:name=".Connexion"
+            android:name=".Consultation"
             android:exported="false" />
         <activity
             android:name=".Inscription"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Connexion"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
