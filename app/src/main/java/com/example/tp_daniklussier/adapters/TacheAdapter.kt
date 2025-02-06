@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tp_daniklussier.Consultation
-import com.example.tp_daniklussier.MainActivity
 import com.example.tp_daniklussier.databinding.TacheItemBinding
 import com.example.tp_daniklussier.models.Tache
 
@@ -43,7 +42,7 @@ object PersonneItemDiffCallback : DiffUtil.ItemCallback<Tache>() {
     override fun areContentsTheSame(oldItem: Tache, newItem: Tache): Boolean {
         return  oldItem.nom == newItem.nom &&
                 oldItem.avancement == newItem.avancement &&
-                oldItem.dateCreation == newItem.dateCreation &&
-                oldItem.dateEcheance == newItem.dateEcheance
+                oldItem.dateEcheance == newItem.dateEcheance &&
+                oldItem.tempsEcoule == newItem.tempsEcoule
     }
 }

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TP_DanikLussier</string>
+    <string name="nav_ouvert"></string>
+    <string name="nav_ferme"></string>
 </resources>
