@@ -27,6 +27,10 @@ class Consultation : AppCompatActivity() {
         setupDrawer()
 
         title = "Consultation"
+
+        binding.numberPicker.minValue = 0
+        binding.numberPicker.maxValue = 100
+        binding.numberPicker.value = 80
     }
 
     private fun setupDrawer() {
