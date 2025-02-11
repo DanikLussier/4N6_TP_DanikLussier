@@ -19,7 +19,7 @@ class Inscription : AppCompatActivity() {
         binding = ActivityInscriptionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        title = "Inscription"
+        title = resources.getString(R.string.InscriptionTitle)
 
         binding.CreateAccount.setOnClickListener {
             intent = Intent(this, MainActivity::class.java)

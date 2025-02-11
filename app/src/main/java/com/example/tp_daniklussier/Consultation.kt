@@ -26,7 +26,7 @@ class Consultation : AppCompatActivity() {
 
         setupDrawer()
 
-        title = "Consultation"
+        title = resources.getString(R.string.ConsultationTitle)
 
         binding.numberPicker.minValue = 0
         binding.numberPicker.maxValue = 100

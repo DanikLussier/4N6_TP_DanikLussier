@@ -4,13 +4,13 @@
         android:id="@+id/accueil_item"
         android:checkable="true"
         android:icon="@android:drawable/ic_menu_upload"
-        android:title="Accueil" />
+        android:title="@string/accueil_drawer" />
     <item
         android:id="@+id/ajouter_item"
         android:checkable="true"
-        android:title="Ajout de tâche" />
+        android:title="@string/ajout_de_t_che_drawer" />
     <item
         android:id="@+id/deconnexion"
         android:checkable="true"
-        android:title="Déconnexion" />
+        android:title="@string/d_connexion_drawer" />
 </menu>

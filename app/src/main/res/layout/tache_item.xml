@@ -23,7 +23,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="Complétion de la tâche"
+            android:text="@string/compl_tion_de_la_t_che"
             android:textAlignment="center"
             android:textSize="16dp"/>
 
@@ -31,7 +31,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="Temps écoulé"
+            android:text="@string/temps_coul_item"
             android:textAlignment="center"
             android:textSize="16dp"/>
 
@@ -73,7 +73,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Échéance : "
+            android:text="@string/ch_ance_item"
             android:textSize="16dp"
             android:textAlignment="viewEnd"/>
 

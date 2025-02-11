@@ -1,5 +1,29 @@
 <resources>
-    <string name="app_name">TP_DanikLussier</string>
+    <string name="app_name">Tasks</string>
     <string name="nav_ouvert"></string>
     <string name="nav_ferme"></string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="connexion">Log In</string>
+    <string name="inscription">Sign Up</string>
+    <string name="temps_coul">Time passed (%)</string>
+    <string name="avancement">Progress :</string>
+    <string name="title">Title</string>
+    <string name="create_task">Create Task</string>
+    <string name="usernameInscription">Username</string>
+    <string name="passwordInscription">Password</string>
+    <string name="confirm_password_Inscription">Confirm Password</string>
+    <string name="create_account_Inscription">Create Account</string>
+    <string name="create_button_Main">Create button</string>
+    <string name="ConnectionTitle">Log In</string>
+    <string name="ConsultationTitle">Information</string>
+    <string name="CreationTitle">Creation</string>
+    <string name="InscriptionTitle">Sign Up</string>
+    <string name="AccueilTitle">Home</string>
+    <string name="compl_tion_de_la_t_che">Task progress</string>
+    <string name="temps_coul_item">Elapsed time</string>
+    <string name="ch_ance_item">Deadline :</string>
+    <string name="accueil_drawer">Home</string>
+    <string name="ajout_de_t_che_drawer">Add task</string>
+    <string name="d_connexion_drawer">Log out</string>
 </resources>

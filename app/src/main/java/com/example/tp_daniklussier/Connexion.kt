@@ -18,7 +18,7 @@ class Connexion : AppCompatActivity() {
         binding = ActivityConnexionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        title = "Connexion"
+        title = resources.getString(R.string.ConnectionTitle)
 
         binding.Connexion.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)

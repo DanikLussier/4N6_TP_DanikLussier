@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
             android:src="@android:drawable/ic_input_add"
-            android:contentDescription="Create button"
+            android:contentDescription="@string/create_button_Main"
             android:layout_margin="20dp"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

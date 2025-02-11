@@ -26,7 +26,7 @@ class Creation : AppCompatActivity() {
 
         setupDrawer()
 
-        title = "Création"
+        title = resources.getString(R.string.CreationTitle)
 
         binding.Create.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)

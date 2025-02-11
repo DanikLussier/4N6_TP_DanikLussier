@@ -8,48 +8,55 @@
     android:layout_height="match_parent"
     android:id="@+id/dl_drawer"
     tools:context=".Creation">
-
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:context=".Creation"
-        android:padding="15dp"
-        android:showDividers="middle"
-        android:divider="@drawable/empty_10dp_divider"
-        >
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/title"
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:boxBackgroundColor="#BBBBBB">
+            android:orientation="vertical"
+            tools:context=".Creation"
+            android:padding="15dp"
+            android:showDividers="middle"
+            android:divider="@drawable/empty_10dp_divider"
+            >
 
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:hint="Title"/>
+                app:boxBackgroundColor="#BBBBBB">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:hint="@string/title"/>
 
-        <DatePicker
-            android:id="@+id/date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/Create"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:textColor="@color/white"
-            android:text="Create Task"/>
+            <DatePicker
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/Create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                android:text="@string/create_task"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <com.google.android.material.navigation.NavigationView
     android:layout_width="wrap_content"
