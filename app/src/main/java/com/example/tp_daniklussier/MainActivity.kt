@@ -123,17 +123,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun fillRecycler() {
         val items: MutableList<Tache> = mutableListOf()
-        for (i in 1..200) {
-            val sexe: String
-            if (i % 2 == 0) {
-                sexe = "Homme"
-            } else {
-                sexe = "Femme"
-            }
-            items.add(Tache(
-                "Nom $i", 50, 80, Date(2026, 5, 5)
-            ))
-        }
+        items.add(Tache("Faire la lessive", 50, 80, Date(2026, 5, 5)))
+        items.add(Tache("Faire les courses", 40, 30, Date(2026, 3, 15)))
+        items.add(Tache("Préparer le dîner", 70, 60, Date(2026, 2, 20)))
+        items.add(Tache("Répondre aux emails", 20, 10, Date(2026, 2, 14)))
+        items.add(Tache("Faire le ménage", 80, 95, Date(2026, 3, 25)))
+        items.add(Tache("Réviser pour l'examen", 60, 50, Date(2026, 6, 10)))
+        items.add(Tache("Appeler le médecin", 90, 100, Date(2026, 2, 12)))
+        items.add(Tache("Faire les impôts", 30, 40, Date(2026, 4, 1)))
+        items.add(Tache("Préparer le rapport de travail", 50, 70, Date(2026, 2, 28)))
+        items.add(Tache("Nettoyer la voiture", 10, 5, Date(2026, 5, 15)))
         adapter.submitList(items) // Pour changer le contenu de la liste, utiliser submitList de l'adapteur
     }
 }

@@ -15,7 +15,13 @@ class TacheAdapter : ListAdapter<Tache, TacheAdapter.PersonneItemViewHolder>(Per
     // binding nous permet d'accéder à tout le champs de notre layout personne_item.xml
     inner class PersonneItemViewHolder(private val binding: TacheItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(tache: Tache) {
-            binding.text.text = tache.nom
+            binding.nomTache.text = tache.nom
+            binding.valeurCompletion.text = tache.avancement.toString() + "%"
+            binding.valeurTempsEcoule.text = tache.tempsEcoule.toString() + "%"
+            binding.valeurDateEcheance.text =
+                tache.dateEcheance.year.toString() + "/" +
+                tache.dateEcheance.month.toString() + "/" +
+                tache.dateEcheance.date.toString()
 
             binding.background.setOnClickListener {
                 val intent = Intent(binding.root.context, Consultation::class.java)

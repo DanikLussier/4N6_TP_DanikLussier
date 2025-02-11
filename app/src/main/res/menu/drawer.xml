@@ -12,5 +12,5 @@
     <item
         android:id="@+id/deconnexion"
         android:checkable="true"
-        android:title="Deconnexion" />
+        android:title="Déconnexion" />
 </menu>
