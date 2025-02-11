@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/dl_tiroir"
+    android:id="@+id/dl_drawer"
     tools:context=".MainActivity">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -39,11 +39,11 @@
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <com.google.android.material.navigation.NavigationView
-        app:headerLayout="@layout/nav_header"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_gravity="start"
-        app:menu="@menu/drawer"
         android:layout_height="match_parent"
-        android:id="@+id/nv_tiroir"/>
+        android:id="@+id/nv_tiroir"
+        app:menu="@menu/drawer"
+        app:headerLayout="@layout/nav_header"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

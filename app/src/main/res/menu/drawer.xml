@@ -8,7 +8,7 @@
     <item
         android:id="@+id/ajouter_item"
         android:checkable="true"
-        android:title="Ajouter" />
+        android:title="Ajout de tâche" />
     <item
         android:id="@+id/deconnexion"
         android:checkable="true"

@@ -1,9 +1,11 @@
 package com.example.tp_daniklussier
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -14,6 +16,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.tp_daniklussier.adapters.TacheAdapter
 import com.example.tp_daniklussier.databinding.ActivityConsultationBinding
 import com.example.tp_daniklussier.databinding.ActivityMainBinding
+import com.example.tp_daniklussier.databinding.NavHeaderBinding
 import com.example.tp_daniklussier.models.Tache
 import com.google.android.material.snackbar.Snackbar
 import java.time.Clock
@@ -48,6 +51,7 @@ class MainActivity : AppCompatActivity() {
     private fun setupDrawer() {
         setupDrawerApplicationBar()
         setupDrawerItemSelected()
+        setupDrawerHeader()
     }
 
     private fun setupDrawerApplicationBar() {
@@ -58,10 +62,10 @@ class MainActivity : AppCompatActivity() {
         // R.string.ouvert et R.string.ferme sont des strings de ressource.
         // Référez-vous à la recette pour les strings de ressource pour voir comment les ajouter :
         // https://info.cegepmontpetit.ca/3N5-Prog3/recettes/ressources-string
-        actionBarDrawerToggle = ActionBarDrawerToggle(this, binding.dlTiroir, R.string.nav_ouvert, R.string.nav_ferme)
+        actionBarDrawerToggle = ActionBarDrawerToggle(this, binding.dlDrawer, R.string.nav_ouvert, R.string.nav_ferme)
 
         // Faire en sorte que le menu hamburger se transforme en flèche au clic, et vis versa
-        binding.dlTiroir.addDrawerListener(actionBarDrawerToggle)
+        binding.dlDrawer.addDrawerListener(actionBarDrawerToggle)
         actionBarDrawerToggle.syncState()
     }
 
@@ -69,28 +73,41 @@ class MainActivity : AppCompatActivity() {
         // Réagir aux clics sur les actions de menu
         binding.nvTiroir.setNavigationItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.accueil_item -> {
-                    Snackbar.make(binding.root, "On va à l'accueil!", Snackbar.LENGTH_SHORT).show()
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
-                }
                 R.id.ajouter_item -> {
-                    Snackbar.make(
-                        binding.root, "On va ajouter quelque chose!", Snackbar.LENGTH_SHORT
-                    ).show()
                     val intent = Intent(this, Creation::class.java)
                     startActivity(intent)
                 }
                 R.id.deconnexion -> {
-                    Snackbar.make(
-                        binding.root, "Déconnexion !!!", Snackbar.LENGTH_SHORT
-                    ).show()
                     val intent = Intent(this, Connexion::class.java)
                     startActivity(intent)
                 }
             }
             false
         }
+    }
+
+    private fun setupDrawerHeader() {
+        // Si on veut avoir du contenu dynamique dans l'en-tête,
+        val headerBinding: NavHeaderBinding = NavHeaderBinding.bind(binding.nvTiroir.getHeaderView(0))
+        headerBinding.headertext.text = "Danik Lussier"
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Réagir au clic sur le menu hamburger
+        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onPostCreate(savedInstanceState: Bundle?) {
+        super.onPostCreate(savedInstanceState)
+        actionBarDrawerToggle.syncState()
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        actionBarDrawerToggle.onConfigurationChanged(newConfig)
+        super.onConfigurationChanged(newConfig)
     }
 
     private fun setupRecycler() {
